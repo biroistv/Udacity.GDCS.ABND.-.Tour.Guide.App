@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,13 +15,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        city_.add(new City("Nyíregyháza", R.mipmap.nyiregy1));
+        autoAddCities();
+        createListView();
 
+    }
+
+    private void createListView()
+    {
         CityAdapter cAdapter = new CityAdapter(this, city_);
-
-        ListView lView = (ListView)findViewById(R.id.city_list);
-
+        ListView lView = findViewById(R.id.city_list);
         lView.setAdapter(cAdapter);
+    }
 
+    private ArrayList<City> autoAddCities()
+    {
+        String[] strCities = this.getResources().getStringArray(R.array.cities);
+
+        for (String str: strCities)
+        {
+            String[] splitStr = str.split("#");
+
+            city_.add(new City(
+                    Integer.parseInt(splitStr[0]),
+                    splitStr[1],
+                    R.mipmap.nyiregy1)
+            );
+        }
+
+
+
+        return null;
     }
 }
