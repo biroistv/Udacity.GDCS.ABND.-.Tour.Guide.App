@@ -1,6 +1,7 @@
 package com.example.biro.udacitygdcsabnd_tourguideapp;
 
 import android.app.Activity;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,11 @@ public class CityAdapter extends ArrayAdapter<City> {
         City c = getItem(position);
 
         ((TextView)listOfViews.findViewById(R.id.city_name)).setText(c.getC_Name_());
-        ((ImageView)listOfViews.findViewById(R.id.city_img)).setImageResource(c.getC_Picture_ID_());
+
+        if (c.getC_Picture_ID_() != null)
+            ((ImageView)listOfViews.findViewById(R.id.city_img)).setImageResource(c.getC_Picture_ID_().intValue());
+        else
+            listOfViews.findViewById(R.id.city_img).setVisibility(View.GONE);
 
         return listOfViews;
     }

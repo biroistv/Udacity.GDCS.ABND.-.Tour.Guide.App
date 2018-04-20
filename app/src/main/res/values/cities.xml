@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="cities">
-        <item>0#Nyíregyháza</item>
-        <item>1#Ófehértó</item>
-        <item>2#Besenyőd</item>
+        <item>0#Nyíregyháza#nyiregy</item>
+        <item>1#Ófehértó#ofeherto</item>
+        <item>2#Besenyőd#besenyod</item>
     </string-array>
 
 </resources>

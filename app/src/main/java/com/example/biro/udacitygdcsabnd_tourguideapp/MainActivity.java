@@ -38,12 +38,28 @@ public class MainActivity extends AppCompatActivity {
             city_.add(new City(
                     Integer.parseInt(splitStr[0]),
                     splitStr[1],
-                    R.mipmap.nyiregy1)
+                    setCityImage(splitStr[2]))
             );
         }
 
 
 
         return null;
+    }
+
+    private Integer setCityImage(final String imgName)
+    {
+        Integer imgResID;
+
+        try
+        {
+            imgResID  = new Integer(this.getResources().getIdentifier(imgName.toString(), "mipmap", this.getPackageName()));
+        }
+        catch (NullPointerException nullExc)
+        {
+            imgResID = null;
+        }
+
+        return imgResID;
     }
 }

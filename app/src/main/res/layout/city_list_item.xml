@@ -25,7 +25,7 @@
             android:id="@+id/city_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/nyiregy1" />
+            android:src="@mipmap/nyiregy" />
 
         <TextView
             android:layout_width="wrap_content"
