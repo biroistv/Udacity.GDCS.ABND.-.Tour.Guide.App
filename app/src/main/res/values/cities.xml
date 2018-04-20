@@ -2,8 +2,8 @@
 <resources>
     <string-array name="cities">
         <item>0#Nyíregyháza#nyiregy</item>
-        <item>1#Ófehértó#ofeherto</item>
-        <item>2#Besenyőd#besenyod</item>
+        <item>1#Debrecen#debrecen</item>
+        <item>2#Budapest#budapest</item>
     </string-array>
 
 </resources>

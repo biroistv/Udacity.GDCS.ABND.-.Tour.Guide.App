@@ -16,21 +16,28 @@
 
         <TextView
             android:id="@+id/city_name"
-            android:layout_width="wrap_content"
+            android:background="#dfdfdf"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="26sp"
-            tools:text="Város neve" />
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            tools:text="City name"/>
 
         <ImageView
             android:id="@+id/city_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/nyiregy" />
+            tools:src="@mipmap/nyiregy"
+            android:adjustViewBounds="true"
+            />
 
         <TextView
+            android:paddingTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Valami adat"/>
+            tools:text="Some extra data"/>
 
     </LinearLayout>
 
