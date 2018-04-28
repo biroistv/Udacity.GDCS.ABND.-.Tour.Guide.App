@@ -33,12 +33,22 @@
             android:adjustViewBounds="true"
             />
 
-        <TextView
-            android:paddingTop="10dp"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Some extra data"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="placeholder"/>
+
+
+
+        </RelativeLayout>
 
     </LinearLayout>
+
+
 
 </LinearLayout>
