@@ -1,4 +1,4 @@
-package com.example.biro.udacitygdcsabnd_tourguideapp;
+package com.example.biro.udacitygdcsabnd_tourguideapp.Utils;
 
 public class City {
 
