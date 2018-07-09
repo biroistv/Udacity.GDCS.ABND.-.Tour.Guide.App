@@ -1,6 +1,5 @@
 package com.example.biro.udacitygdcsabnd_tourguideapp.Fragments;
 
-
 import android.content.Context;
 import android.media.Image;
 import android.os.Bundle;
@@ -17,22 +16,18 @@ import com.example.biro.udacitygdcsabnd_tourguideapp.Utils.City;
 import com.example.biro.udacitygdcsabnd_tourguideapp.R;
 import com.example.biro.udacitygdcsabnd_tourguideapp.Utils.Utils;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class NyiregyhazaFragment extends Fragment {
 
     private City nyiregyhaza;
 
-    public NyiregyhazaFragment(){}
+    public NyiregyhazaFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.city_fragment_layout, container, false);
 
+        View view = inflater.inflate(R.layout.city_fragment_layout, container, false);
         Utils.setupTheLayout(view, nyiregyhaza);
 
         return view;
@@ -44,15 +39,10 @@ public class NyiregyhazaFragment extends Fragment {
         return super.getContext();
     }
 
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         nyiregyhaza = Utils.getCityFromResource(getContext(), 0);
-
     }
-
-
 }
