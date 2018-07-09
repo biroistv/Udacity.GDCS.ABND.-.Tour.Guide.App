@@ -5,10 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.biro.udacitygdcsabnd_tourguideapp.MainActivity;
 import com.example.biro.udacitygdcsabnd_tourguideapp.R;
-
-import java.util.ArrayList;
 
 public class Utils {
 
@@ -27,7 +24,7 @@ public class Utils {
         Integer imgResID;
 
         try {
-            imgResID = new Integer(context.getResources().getIdentifier(imgName.toString(), "mipmap", context.getPackageName()));
+            imgResID = context.getResources().getIdentifier(imgName, "mipmap", context.getPackageName());
         } catch (NullPointerException nullExc) {
             imgResID = null;
         }
@@ -37,10 +34,10 @@ public class Utils {
 
     public static void setupTheLayout(View view, City city)
     {
-        ImageView img = (ImageView) view.findViewById(R.id.city_img);
-        img.setImageResource(city.getC_Picture_ID_());
+        ImageView img = view.findViewById(R.id.city_img);
+        img.setImageResource(city.getCityPictureResourceID());
 
-        TextView city_name = (TextView) view.findViewById(R.id.city_name);
-        city_name.setText(city.getC_Name_());
+        TextView city_name = view.findViewById(R.id.city_name);
+        city_name.setText(city.getCityName());
     }
 }

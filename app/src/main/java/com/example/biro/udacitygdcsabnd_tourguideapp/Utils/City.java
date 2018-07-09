@@ -2,25 +2,23 @@ package com.example.biro.udacitygdcsabnd_tourguideapp.Utils;
 
 public class City {
 
-    private int c_ID_;
-    private String c_Name_;
-    private Integer c_Picture_ID_;
+    private int cityID;
+    private String cityName;
+    private Integer cityPictureResourceID;
 
-    public City(int c_ID_, String c_Name_, Integer c_Picture_ID_) {
-        this.c_ID_ = c_ID_;
-        this.c_Name_ = c_Name_;
-        this.c_Picture_ID_ = c_Picture_ID_;
+    City(int cityID, String cityName, Integer cityPictureResourceID) {
+        this.cityID = cityID;
+        this.cityName = cityName;
+        this.cityPictureResourceID = cityPictureResourceID;
     }
 
-    public String getC_Name_() {
-        return c_Name_;
+    public String getCityName() {
+        return cityName;
     }
-
-    public int getC_ID_() {
-        return c_ID_;
+    public int getCityID() {
+        return cityID;
     }
-
-    public Integer getC_Picture_ID_() {
-        return c_Picture_ID_;
+    public Integer getCityPictureResourceID() {
+        return cityPictureResourceID;
     }
 }
