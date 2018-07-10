@@ -3,4 +3,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="browse_places">Browse places</string>
     <string name="placeholder_description">placeholder place for some basic information about the city</string>
+    <string name="restaurant_tab">Restaurant</string>
+    <string name="hotel_tab">Hotel</string>
+    <string name="culture_tab">Culture</string>
 </resources>
