@@ -23,7 +23,7 @@ public class DebrecenFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.city_fragment_layout, container, false);
-        Utils.setupTheLayout(view, debrecen);
+        Utils.setupTheLayout(view, debrecen, getActivity());
 
         return view;
     }

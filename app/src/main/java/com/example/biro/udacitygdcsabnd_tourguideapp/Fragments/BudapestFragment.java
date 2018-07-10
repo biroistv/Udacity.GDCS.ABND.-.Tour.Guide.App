@@ -1,5 +1,6 @@
 package com.example.biro.udacitygdcsabnd_tourguideapp.Fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,7 +24,7 @@ public class BudapestFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.city_fragment_layout, container, false);
-        Utils.setupTheLayout(view, budapest);
+        Utils.setupTheLayout(view, budapest, getActivity());
 
         return view;
     }

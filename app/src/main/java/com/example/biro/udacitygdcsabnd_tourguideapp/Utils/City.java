@@ -28,4 +28,5 @@ public class City {
         return cityPictureResourceID;
     }
     public String getDescription(){ return description; }
+    public ArrayList<Place> getCityPlaces() { return cityPlaces; }
 }
