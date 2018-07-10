@@ -21,9 +21,7 @@ public class City {
     public String getCityName() {
         return cityName;
     }
-    public int getCityID() {
-        return cityID;
-    }
+    public int getCityID() { return cityID; }
     public Integer getCityPictureResourceID() {
         return cityPictureResourceID;
     }

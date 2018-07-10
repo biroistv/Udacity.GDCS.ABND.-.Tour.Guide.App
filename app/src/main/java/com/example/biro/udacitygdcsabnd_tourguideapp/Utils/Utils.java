@@ -17,11 +17,6 @@ import java.util.ArrayList;
 
 public class Utils {
 
-    // Type of the place
-    private static final int RESTAURANT = 0;
-    private static final int HOTEL = 1;
-    private static final int CULTURE = 2;
-
     public static City getCityFromResource(Context context, int pos) {
 
         String[] strCities = context.getResources().getStringArray(R.array.cities);
@@ -49,8 +44,7 @@ public class Utils {
                         new Place(
                                 splitPlace[2],
                                 splitPlace[3],
-                                Integer.parseInt(splitPlace[1]),
-                                null
+                                Integer.parseInt(splitPlace[1])
                         ));
             }
         }
@@ -101,7 +95,7 @@ public class Utils {
                 filteredPlaces.add(p);
         }
 
-        PlacesListAdapter placesListAdapter = new PlacesListAdapter(activity, filteredPlaces, type);
+        PlacesListAdapter placesListAdapter = new PlacesListAdapter(activity, filteredPlaces);
         ListView lv = view.findViewById(R.id.places_list_view);
         lv.setAdapter(placesListAdapter);
     }

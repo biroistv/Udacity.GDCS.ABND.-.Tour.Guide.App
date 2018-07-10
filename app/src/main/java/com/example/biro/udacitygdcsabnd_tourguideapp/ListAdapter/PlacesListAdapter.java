@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.biro.udacitygdcsabnd_tourguideapp.R;
@@ -17,11 +16,8 @@ import java.util.ArrayList;
 
 public class PlacesListAdapter extends ArrayAdapter<Place> {
 
-    private int type;
-
-    public PlacesListAdapter(@NonNull Context context, ArrayList<Place> resource, int type) {
+    public PlacesListAdapter(@NonNull Context context, ArrayList<Place> resource) {
         super(context, 0, resource);
-        this.type = type;
     }
 
     @NonNull
@@ -35,6 +31,7 @@ public class PlacesListAdapter extends ArrayAdapter<Place> {
 
         Place place = getItem(position);
 
+        assert place != null;
         ((TextView) listOfView.findViewById(R.id.place_name)).setText(place.getPlaceName());
         ((TextView) listOfView.findViewById(R.id.place_address)).setText(place.getPlaceAdress());
 
