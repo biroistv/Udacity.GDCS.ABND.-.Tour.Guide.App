@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.example.biro.udacitygdcsabnd_tourguideapp.R;
 
+import org.w3c.dom.Text;
+
 public class Utils {
 
     public static City getCityFromResource(Context context, int pos) {
@@ -17,7 +19,9 @@ public class Utils {
         return new City(
                 Integer.parseInt(splitStr[0]),
                 splitStr[1],
-                setCityImage(context, splitStr[2]));
+                setCityImage(context, splitStr[2]),
+                splitStr[3],
+                null);
     }
 
     private static Integer setCityImage(Context context, String imgName) {
@@ -39,5 +43,8 @@ public class Utils {
 
         TextView city_name = view.findViewById(R.id.city_name);
         city_name.setText(city.getCityName());
+
+        TextView city_description = view.findViewById(R.id.city_information_text);
+        city_description.setText(city.getDescription());
     }
 }

@@ -33,14 +33,13 @@ public class NyiregyhazaFragment extends Fragment {
         return view;
     }
 
-    @Nullable
     @Override
     public Context getContext() {
         return super.getContext();
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         nyiregyhaza = Utils.getCityFromResource(getContext(), 0);

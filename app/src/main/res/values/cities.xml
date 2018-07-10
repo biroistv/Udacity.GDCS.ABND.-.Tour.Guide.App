@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="cities">
-        <item>0#Nyíregyháza#nyiregy</item>
-        <item>1#Debrecen#debrecen</item>
-        <item>2#Budapest#budapest</item>
+        <item>0#Nyíregyháza#nyiregy#Nyíregyháza is a city in northeastern Hungary and the county capital of Szabolcs-Szatmár-Bereg. With a population of 118,000, it is the seventh-largest city in Hungary and is one of the leading cities of Northern Hungary and of the northern part of the Great Hungarian Plain.</item>
+        <item>1#Debrecen#debrecen#Debrecen is Hungary second largest city after Budapest. It is the regional center of the Northern Great Plain region and the seat of Hajdú-Bihar county. It was the largest Hungarian city in the 18th century and it is one of the Hungarian peoples most important cultural centres.</item>
+        <item>2#Budapest#budapest#Budapest is the capital and the most populous city of Hungary, and one of the largest cities in the European Union. With an estimated 2016 population of 1,752,704 distributed over a land area of about, Budapest is also one of the most densely populated major cities in the EU.</item>
     </string-array>
 
 </resources>
