@@ -4,9 +4,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CityFragmentPageAdapter extends FragmentPagerAdapter {
 
-    private static final int NUMBER_OF_CITY = 3;
+    private final List<Fragment> mFragmentList = new ArrayList<>();
+
+    public void addFragment(Fragment fragment) {
+        mFragmentList.add(fragment);
+    }
 
     public CityFragmentPageAdapter(FragmentManager fm) {
         super(fm);
@@ -14,22 +21,11 @@ public class CityFragmentPageAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-            case 0: {
-                return new NyiregyhazaFragment();
-            }
-            case 1: {
-                return new DebrecenFragment();
-            }
-            case 2: {
-                return new BudapestFragment();
-            }
-            default: return null;
-        }
+        return mFragmentList.get(position);
     }
 
     @Override
     public int getCount() {
-        return NUMBER_OF_CITY;
+        return mFragmentList.size();
     }
 }

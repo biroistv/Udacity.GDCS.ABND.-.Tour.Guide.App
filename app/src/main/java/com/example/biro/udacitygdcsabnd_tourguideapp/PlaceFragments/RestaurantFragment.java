@@ -4,11 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.biro.udacitygdcsabnd_tourguideapp.R;
 import com.example.biro.udacitygdcsabnd_tourguideapp.Utils.Place;
@@ -40,7 +38,6 @@ public class RestaurantFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Intent intent = getActivity().getIntent();
         places = (ArrayList<Place>) intent.getSerializableExtra("places_item");
     }

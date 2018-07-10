@@ -9,7 +9,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.biro.udacitygdcsabnd_tourguideapp.R;
 import com.example.biro.udacitygdcsabnd_tourguideapp.Utils.Place;
@@ -35,7 +34,6 @@ public class CultureFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Intent intent = getActivity().getIntent();
         places = (ArrayList<Place>) intent.getSerializableExtra("places_item");
     }

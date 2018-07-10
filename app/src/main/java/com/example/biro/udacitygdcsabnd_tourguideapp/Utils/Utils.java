@@ -15,8 +15,15 @@ import com.example.biro.udacitygdcsabnd_tourguideapp.R;
 
 import java.util.ArrayList;
 
+/**
+ *  This class contains some helper methods.
+ * */
+
 public class Utils {
 
+    /**
+     *  With this method, i get the information for each city what is store in cities resource files.
+     * */
     public static City getCityFromResource(Context context, int pos) {
 
         String[] strCities = context.getResources().getStringArray(R.array.cities);
@@ -25,21 +32,29 @@ public class Utils {
         return new City(
                 Integer.parseInt(splitStr[0]),
                 splitStr[1],
-                setCityImage(context, splitStr[2]),
+                getCityImage(context, splitStr[2]),
                 splitStr[3],
                 getLocationsFromResource(context, Integer.parseInt(splitStr[0])));
     }
 
-    private static ArrayList<Place> getLocationsFromResource(Context context, int city_id) {
+    /**
+     *  This methods get the places basic information what is store in the places.xml resource file.
+     *  cityID represent the city, where i looking for the places.
+     * */
+    private static ArrayList<Place> getLocationsFromResource(Context context, int cityID) {
         ArrayList<Place> places = new ArrayList<>();
 
+        // Get te resource from the resource library
         String[] strPlaces = context.getResources().getStringArray(R.array.places);
 
+        // Iterate through the list
         for (String place : strPlaces) {
 
+            // Split up one line at a time
             String[] splitPlace = place.split("#");
 
-            if (Integer.parseInt(splitPlace[0]) == city_id) {
+            // Add the places to the array list
+            if (Integer.parseInt(splitPlace[0]) == cityID) {
                 places.add(
                         new Place(
                                 splitPlace[2],
@@ -52,7 +67,10 @@ public class Utils {
         return places;
     }
 
-    private static Integer setCityImage(Context context, String imgName) {
+    /**
+     *  This method get the valid picture id depend on the picture name.
+     * */
+    private static Integer getCityImage(Context context, String imgName) {
         Integer imgResID;
 
         try {
@@ -64,15 +82,18 @@ public class Utils {
         return imgResID;
     }
 
+    /**
+     *  This helper method set up the layout what we see in the MainActivity. I use this in the city fragments.
+     * */
     public static void setupCityFragmentLayout(View view, final City city, final Activity activity) {
         ImageView img = view.findViewById(R.id.city_img);
         img.setImageResource(city.getCityPictureResourceID());
 
-        TextView city_name = view.findViewById(R.id.city_name);
-        city_name.setText(city.getCityName());
+        TextView cityName = view.findViewById(R.id.city_name);
+        cityName.setText(city.getCityName());
 
-        TextView city_description = view.findViewById(R.id.city_information_text);
-        city_description.setText(city.getDescription());
+        TextView cityDescription = view.findViewById(R.id.city_information_text);
+        cityDescription.setText(city.getDescription());
 
         Button button = view.findViewById(R.id.browse_places_btn);
         button.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +107,9 @@ public class Utils {
         });
     }
 
+    /**
+     *  This helper method set up the layout what we see in the PLacesActivity. I use this in the places fragments.
+     * */
     public static void setupPlacesFragmentLayout(View view, ArrayList<Place> placeArrayList, Activity activity, int type)
     {
         ArrayList<Place> filteredPlaces = new ArrayList<>();

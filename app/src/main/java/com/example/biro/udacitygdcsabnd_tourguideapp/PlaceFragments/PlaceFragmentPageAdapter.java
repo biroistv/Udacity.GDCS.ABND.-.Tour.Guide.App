@@ -15,6 +15,10 @@ public class PlaceFragmentPageAdapter extends FragmentPagerAdapter{
     private final List<Fragment> mFragmentList = new ArrayList<>();
     private final List<String> mFragmentTitleList = new ArrayList<>();
 
+    /**
+     *  This method adds fragments and fragments title to the lists. I use those list for
+     *  setting up the fragment adapter.
+     * */
     public void addFragment(Fragment fragment, String title) {
         mFragmentList.add(fragment);
         mFragmentTitleList.add(title);
@@ -34,7 +38,6 @@ public class PlaceFragmentPageAdapter extends FragmentPagerAdapter{
 
     @Override
     public CharSequence getPageTitle(int position) {
-        // Generate title based on item position
         return mFragmentTitleList.get(position);
     }
 }
