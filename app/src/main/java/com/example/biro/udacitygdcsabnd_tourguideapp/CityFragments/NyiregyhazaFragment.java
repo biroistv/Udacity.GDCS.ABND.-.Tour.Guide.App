@@ -1,42 +1,42 @@
-package com.example.biro.udacitygdcsabnd_tourguideapp.Fragments;
+package com.example.biro.udacitygdcsabnd_tourguideapp.CityFragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.biro.udacitygdcsabnd_tourguideapp.R;
 import com.example.biro.udacitygdcsabnd_tourguideapp.Utils.City;
+import com.example.biro.udacitygdcsabnd_tourguideapp.R;
 import com.example.biro.udacitygdcsabnd_tourguideapp.Utils.Utils;
 
-public class DebrecenFragment extends Fragment {
+public class NyiregyhazaFragment extends Fragment {
 
-    private City debrecen;
+    private City nyiregyhaza;
 
-    public DebrecenFragment() {}
+    public NyiregyhazaFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.city_fragment_layout, container, false);
-        Utils.setupTheLayout(view, debrecen, getActivity());
+        Utils.setupCityFragmentLayout(view, nyiregyhaza, getActivity());
 
         return view;
     }
 
-    @Nullable
     @Override
     public Context getContext() {
         return super.getContext();
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        debrecen = Utils.getCityFromResource(getContext(), 1);
+
+        nyiregyhaza = Utils.getCityFromResource(getContext(), 0);
     }
 }

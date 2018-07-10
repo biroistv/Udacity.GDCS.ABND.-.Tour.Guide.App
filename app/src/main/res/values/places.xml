@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="places">
+        <item>0#0#Irány Colorado steak house#Blaha Lújza Sétány 4-6.</item>
+        <item>0#0#Cloe New York-ban#Luther utca 5.</item>
+        <item>0#1#Hotel Pagony Wellness#Újmajori út 14-18.</item>
+        <item>0#1#Centrál hotel#Nyár u. 2-4.</item>
+
+
+    </string-array>
+</resources>

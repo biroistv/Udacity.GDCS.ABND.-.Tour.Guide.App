@@ -1,18 +1,15 @@
 package com.example.biro.udacitygdcsabnd_tourguideapp.Utils;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.io.Serializable;
 
 public class Place implements Serializable {
 
     private String placeName;
     private String placeAdress;
-    private String placeType;
+    private int placeType;
     private Integer placeTypePicturResourceID;
 
-    public Place(String placeName, String placeAdress, String placeType, Integer placeTypePicturResourceID) {
+    public Place(String placeName, String placeAdress, int placeType, Integer placeTypePicturResourceID) {
         this.placeName = placeName;
         this.placeAdress = placeAdress;
         this.placeType = placeType;
@@ -27,7 +24,7 @@ public class Place implements Serializable {
         return placeAdress;
     }
 
-    public String getPlaceType() {
+    public int getPlaceType() {
         return placeType;
     }
 

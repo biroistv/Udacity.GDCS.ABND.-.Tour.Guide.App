@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">ABND - Tour Guide App</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="browse_places">Browse places</string>
     <string name="placeholder_description">placeholder place for some basic information about the city</string>
