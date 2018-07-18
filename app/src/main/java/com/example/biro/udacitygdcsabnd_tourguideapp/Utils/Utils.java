@@ -60,7 +60,7 @@ public class Utils {
                                 splitPlace[3],
                                 splitPlace[4],
                                 Integer.parseInt(splitPlace[1]),
-                                getLocationImage(context, splitPlace[2])//todo: kép idjét kiszedni
+                                getLocationImage(context, splitPlace[2])
                         ));
             }
         }
@@ -71,7 +71,6 @@ public class Utils {
     /**
      *  This method get the valid picture id depend on the picture name.
      * */
-    //TODO: implementing the image process method
     private static Integer getCityImage(Context context, String imgName) {
         Integer imgResID;
 
