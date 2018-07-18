@@ -57,9 +57,10 @@ public class Utils {
             if (Integer.parseInt(splitPlace[0]) == cityID) {
                 places.add(
                         new Place(
-                                splitPlace[2],
                                 splitPlace[3],
-                                Integer.parseInt(splitPlace[1])
+                                splitPlace[4],
+                                Integer.parseInt(splitPlace[1]),
+                                getLocationImage(context, splitPlace[2])//todo: kép idjét kiszedni
                         ));
             }
         }
@@ -70,11 +71,27 @@ public class Utils {
     /**
      *  This method get the valid picture id depend on the picture name.
      * */
+    //TODO: implementing the image process method
     private static Integer getCityImage(Context context, String imgName) {
         Integer imgResID;
 
         try {
-            imgResID = context.getResources().getIdentifier(imgName, "mipmap", context.getPackageName());
+            imgResID = context.getResources().getIdentifier(imgName, "drawable", context.getPackageName());
+        } catch (NullPointerException nullExc) {
+            imgResID = null;
+        }
+
+        return imgResID;
+    }
+
+    /**
+     *  This method get the valid picture id depend on the picture name.
+     * */
+    private static Integer getLocationImage(Context context, String imgName) {
+        Integer imgResID;
+
+        try {
+            imgResID = context.getResources().getIdentifier(imgName, "drawable", context.getPackageName());
         } catch (NullPointerException nullExc) {
             imgResID = null;
         }

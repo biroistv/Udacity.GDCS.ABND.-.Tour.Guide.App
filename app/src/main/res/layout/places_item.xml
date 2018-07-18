@@ -5,22 +5,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="20dp">
 
-    <TextView
-        android:id="@+id/place_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="29sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        tools:text="place name"/>
+    <ImageView
+        android:id="@+id/place_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:src="@drawable/placeholder_image"
+        />
 
-    <TextView
-        android:id="@+id/place_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="place address"/>
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="29sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="place name"/>
+
+        <TextView
+            android:id="@+id/place_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="place address"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="places">
-        <item>0#0#Irány Colorado steak house#Blaha Lújza Sétány 4-6.</item>
-        <item>0#0#Cloe New York-ban#Luther utca 5.</item>
-        <item>0#1#Hotel Pagony Wellness#Újmajori út 14-18.</item>
-        <item>0#1#Centrál hotel#Nyár u. 2-4.</item>
-        <item>0#2#Nyíregyházi állatpark#4431 Nyíregyháza-Sóstógyógyfürdő, Sóstói út</item>
-        <item>0#2#Aquarius Élmény- és Parkfürdő#4431 Nyíregyháza-Sóstógyógyfürdő, Fürdőház tér 2.</item>
-        <item>1#0#Csokonai Restaurant#Kossuth utca 21.</item>
-        <item>1#0#IKON Restaurant Debrecen#Piac utca 23.</item>
-        <item>1#1#Hotel Divinus#Debrecen, Nagyerdei krt. 1.</item>
-        <item>1#1#Aquaticum Debrecen#4032 Debrecen, Nagyerdei park 1.</item>
-        <item>1#2#Déri Múzeum#4026 Debrecen, Déri tér 1</item>
-        <item>1#2#Debreceni Irodalmi Múzeum#4027 Debrecen, Borsos József tér 1</item>
-        <item>2#0#Comme Chez Soi#Aranykez utca 2., Budapest 1052</item>
-        <item>2#0#Bors GasztroBar#Kazinczy utca 10., Budapest 1075</item>
-        <item>2#1#West City Apartments Budapest#1132 Budapest, Victor Hugo utca 25-27</item>
-        <item>2#1#Green Hotel Budapest#1148 Budapest, Kerepesi út 34.</item>
-        <item>2#2#Parliament#Kossuth Lajos ter 1-3., Budapest 1055</item>
-        <item>2#2#Fisherman Bastion#Szentharomsag ter, Budapest 1014</item>
-
-
+        <!-- City ID # Location Type # Image name # Location name # Location address-->
+        <item>0#0#placeholder_image#Irány Colorado steak house#Blaha Lújza Sétány 4-6.</item>
+        <item>0#0#placeholder_image#Cloe New York-ban#Luther utca 5.</item>
+        <item>0#1#placeholder_image#Hotel Pagony Wellness#Újmajori út 14-18.</item>
+        <item>0#1#placeholder_image#Centrál hotel#Nyár u. 2-4.</item>
+        <item>0#2#placeholder_image#Nyíregyházi állatpark#4431 Nyíregyháza-Sóstógyógyfürdő, Sóstói út</item>
+        <item>0#2#placeholder_image#Aquarius Élmény- és Parkfürdő#4431 Nyíregyháza-Sóstógyógyfürdő, Fürdőház tér 2.</item>
+        <item>1#0#placeholder_image#Csokonai Restaurant#Kossuth utca 21.</item>
+        <item>1#0#placeholder_image#IKON Restaurant Debrecen#Piac utca 23.</item>
+        <item>1#1#placeholder_image#Hotel Divinus#Debrecen, Nagyerdei krt. 1.</item>
+        <item>1#1#placeholder_image#Aquaticum Debrecen#4032 Debrecen, Nagyerdei park 1.</item>
+        <item>1#2#placeholder_image#Déri Múzeum#4026 Debrecen, Déri tér 1</item>
+        <item>1#2#placeholder_image#Debreceni Irodalmi Múzeum#4027 Debrecen, Borsos József tér 1</item>
+        <!-- Comme Chez Soi restaurant image is from the
+                https://www.restu.hu/ir/restaurant/f2d/f2d79af0c6096676f95833aa0adf130d.jpg
+         -->
+        <item>2#0#comme_chez_soi#Comme Chez Soi#Aranykez utca 2., Budapest 1052</item>
+        <item>2#0#placeholder_image#Bors GasztroBar#Kazinczy utca 10., Budapest 1075</item>
+        <item>2#1#placeholder_image#West City Apartments Budapest#1132 Budapest, Victor Hugo utca 25-27</item>
+        <item>2#1#placeholder_image#Green Hotel Budapest#1148 Budapest, Kerepesi út 34.</item>
+        <item>2#2#placeholder_image#Parliament#Kossuth Lajos ter 1-3., Budapest 1055</item>
+        <item>2#2#placeholder_image#Fisherman Bastion#Szentharomsag ter, Budapest 1014</item>
     </string-array>
 </resources>

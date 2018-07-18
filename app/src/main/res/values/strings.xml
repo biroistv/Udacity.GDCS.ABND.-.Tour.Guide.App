@@ -6,4 +6,9 @@
     <string name="restaurant_tab">Restaurant</string>
     <string name="hotel_tab">Hotel</string>
     <string name="culture_tab">Culture</string>
+    <string name="place_item">places_item</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="hotel">Hotel</string>
+    <string name="culture">Culture</string>
+    <string name="places_suffix">places</string>
 </resources>

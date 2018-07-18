@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.biro.udacitygdcsabnd_tourguideapp.R;
@@ -34,6 +35,7 @@ public class PlacesListAdapter extends ArrayAdapter<Place> {
         assert place != null;
         ((TextView) listOfView.findViewById(R.id.place_name)).setText(place.getPlaceName());
         ((TextView) listOfView.findViewById(R.id.place_address)).setText(place.getPlaceAdress());
+        ((ImageView) listOfView.findViewById(R.id.place_image)).setImageResource(place.getPlacePictureID());
 
         return listOfView;
     }

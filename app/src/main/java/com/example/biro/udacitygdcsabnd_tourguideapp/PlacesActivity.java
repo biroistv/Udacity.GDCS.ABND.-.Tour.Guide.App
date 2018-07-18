@@ -33,9 +33,9 @@ public class PlacesActivity extends AppCompatActivity {
         PlaceFragmentPageAdapter mPlaceFragmentPageAdapter = new PlaceFragmentPageAdapter(getSupportFragmentManager());
 
         mViewPager = findViewById(R.id.places_view_pager);
-        mPlaceFragmentPageAdapter.addFragment(new RestaurantFragment(), "Restaurant");
-        mPlaceFragmentPageAdapter.addFragment(new HotelFragment(), "Hotel");
-        mPlaceFragmentPageAdapter.addFragment(new CultureFragment(), "Culture");
+        mPlaceFragmentPageAdapter.addFragment(new RestaurantFragment(), getString(R.string.restaurant));
+        mPlaceFragmentPageAdapter.addFragment(new HotelFragment(), getString(R.string.hotel));
+        mPlaceFragmentPageAdapter.addFragment(new CultureFragment(), getString(R.string.culture));
         mViewPager.setAdapter(mPlaceFragmentPageAdapter);
 
         TabLayout tabLayout = findViewById(R.id.sliding_tabs);
@@ -48,7 +48,7 @@ public class PlacesActivity extends AppCompatActivity {
      * */
     private void setActivityTitle() {
         getNameFromIntent();
-        setTitle(activity_title + " places");
+        setTitle(activity_title + getString(R.string.places_suffix));
     }
 
     /**
